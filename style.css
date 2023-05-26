@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family-Poppins:wght@200;300;400;500;600;700;800;900&display-swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+section .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+section .trees {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 100;
+	pointer-events: none;
+}
+
+section .girl {
+	position: absolute;
+	scale: 0.65;
+	pointer-events: none;
+	user-select: none;
+	animation: animateGirl 20s linear infinite;
+}
+
+@keyframes animateGirl {
+	0% {
+		transform: translateX(calc(100% + 100vw));
+	}
+
+	50% {
+		transform: translateX(calc(-100% - 100vw));
+	}
+
+	50.01% {
+		transform: translateX(calc(-100% - 100vw));
+	}
+
+	100% {
+		transform: translateX(calc(100% + 100vw));
+	}
+}
+
+.Login {
+	position: relative;
+	padding: 60px;
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(15px);
+	border: 1px solid #fff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Login h2 {
+	pointer-events: none;
+	user-select: none;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: 600;
+	color: #8c96dcad;
+	margin-bottom: 30px;
+}
+
+.Login .inputBox {
+	position: relative;
+}
+
+.Login .inputBox input {
+	position: relative;
+	width: 100%;
+	padding: 15px 20px;
+	outline: none;
+	font-size: 1.25em;
+	color: #8c96dcad;
+	background-color: rgb(45, 45, 45);
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 30px;
+}
+
+.Login .inputBox #btn {
+	position: relative;
+	border: none;
+	outline: none;
+	background: #248f24c7;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.25em;
+	font-weight: 500;
+	transition: 0.5s;
+}
+
+.Login .inputBox #btn:hover {
+	background: #42d642;
+	border: 1px solid white;
+}
+
+.Login .inputBox #btn:active {
+	background: #248124;
+	border: 1px solid rgb(142, 142, 142);
+}
+
+.Login .group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.button {
+	background-color: #8c95dc;
+	/* Green */
+	border: none;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition: 0.6s;
+	cursor: pointer;
+}
+
+.button1 {
+	padding: 10px 10px;
+	background-color: transparent;
+	color: white;
+}
+
+.button1:hover {
+	background-color: #42d642;
+	color: white;
+}
+
+.button1:active {
+	background: #248124;
+}
+
+.Leaves {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.Leaves .set {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.Leaves .set div {
+	position: absolute;
+	display: block;
+}
+
+.input-group input {
+	outline: 2px solid #6d67e4;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	background: transparent;
+	caret-color: #6d67e4;
+	transition: 0.2s;
+	color: #8c96dcad;
+}
+
+.input-group label {
+	cursor: text;
+	user-select: none;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	transform: translate(5px, 4px);
+	color: #8c96dcad;
+	transition: 0.2s;
+}
+
+.input-group input:focus,
+input:valid {
+	outline: 2px solid #8c95dc;
+}
+
+input:focus+label,
+input:valid+label {
+	transform: translate(-10px, -40px);
+	scale: 1;
+	color: #ffffffad;
+}
